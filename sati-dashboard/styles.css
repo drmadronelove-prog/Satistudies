@@ -1,0 +1,370 @@
+/* ==========================================================================
+   Sati Certificate Program — Dashboard
+   Palette variables live here; adjust colors in one place.
+   ========================================================================== */
+
+:root {
+  --gold: #AD8A2D;
+  --cream: #F6EEDE;
+  --navy: #1C2B4B;
+  --slate: #3D4B5C;
+  --white: #FFFFFF;
+  --border: rgba(28, 43, 75, 0.75); /* thin dark button border */
+  --hairline: #E4DCC8;              /* subtle card/footer borders */
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --max-width: 1100px;
+}
+
+/* ---- Reset / base ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--slate);
+  background: var(--white);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container.narrow {
+  max-width: 760px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--navy);
+}
+
+a {
+  color: var(--gold);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Announcement bar
+   ========================================================================== */
+
+.announcement-bar {
+  background: var(--gold);
+  color: var(--white);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  background: var(--cream);
+  padding: 1.25rem 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-name {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--navy);
+}
+
+.logo-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--slate);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+.site-nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  border-bottom-color: var(--gold);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  text-align: center;
+  padding: 5rem 0 5.5rem;
+}
+
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  max-width: 18ch;
+  margin: 0 auto;
+}
+
+.squiggle {
+  display: block;
+  width: 220px;
+  height: 14px;
+  margin: 1.5rem auto;
+}
+
+.squiggle.small {
+  width: 160px;
+  margin: 1rem auto 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.1875rem;
+  max-width: 48ch;
+  margin: 0 auto 0.5rem;
+}
+
+.tagline {
+  font-family: var(--font-script);
+  font-size: 1.625rem;
+  color: var(--gold);
+  margin-bottom: 2.75rem;
+}
+
+/* ---- Hero buttons ---- */
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--navy);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 1rem 1.75rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+/* ==========================================================================
+   Announcements
+   ========================================================================== */
+
+.announcements {
+  padding: 3.5rem 0 4.5rem;
+  text-align: center;
+}
+
+.announcements h2,
+.support h2 {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 400;
+}
+
+.announcement-feed {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.announcement-card {
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 1.75rem;
+}
+
+.announcement-date {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.announcement-title {
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-body a {
+  color: var(--gold);
+}
+
+/* ==========================================================================
+   Support contacts
+   ========================================================================== */
+
+.support {
+  padding: 3.5rem 0 5rem;
+  text-align: center;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.support-card {
+  background: var(--cream);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+}
+
+.support-card h3 {
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.support-card p {
+  margin-bottom: 0.75rem;
+}
+
+.support-card a {
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background: var(--cream);
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.footer-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sati Certificate Program — Dashboard</title>
+  <meta name="description" content="Resource hub for the Sati Certificate Program at the Sati Center for Buddhist Studies.">
+
+  <!-- Google Fonts: Cormorant Garamond (headings), Source Sans 3 (body/nav), Great Vibes (decorative) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Great+Vibes&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ Announcement bar ============ -->
+  <div class="announcement-bar" role="region" aria-label="Site announcement">
+    Spring Registration Now Open
+  </div>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="logo" href="#" aria-label="Sati Center for Buddhist Studies — home">
+        <!--
+          Placeholder logo mark: a simple seated meditating figure drawn as inline SVG.
+          To use the real logo, replace this <svg> with:
+            <img src="assets/logo.svg" alt="Sati Center for Buddhist Studies logo" class="logo-mark">
+        -->
+        <svg class="logo-mark" viewBox="0 0 64 64" role="img" aria-label="Seated meditating figure" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#AD8A2D">
+            <!-- head -->
+            <circle cx="32" cy="12" r="7"/>
+            <!-- torso -->
+            <path d="M32 20c-7 0-11 6-12 14l-2 10h28l-2-10c-1-8-5-14-12-14z"/>
+            <!-- crossed legs -->
+            <path d="M10 48c2-5 9-8 22-8s20 3 22 8c1 3-1 5-4 5H14c-3 0-5-2-4-5z"/>
+            <!-- arms resting -->
+            <path d="M18 34c-3 3-4 7-3 9l6-2c-1-3-1-5-3-7zM46 34c3 3 4 7 3 9l-6-2c1-3 1-5 3-7z"/>
+          </g>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-name">Sati Center</span>
+          <span class="logo-sub">for Buddhist Studies</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <!-- TODO: replace # with real URLs -->
+        <a href="#">Course Registration</a>
+        <a href="#">Class Schedule</a>
+        <a href="#">Faculty and Staff</a>
+        <a href="#">Calendar</a>
+        <a href="#">Canvas</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Sati Certificate Program</p>
+        <h1>Everything you need for the certificate program.</h1>
+
+        <!-- Hand-drawn wavy gold divider -->
+        <svg class="squiggle" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
+                fill="none" stroke="#AD8A2D" stroke-width="2.25" stroke-linecap="round"/>
+        </svg>
+
+        <p class="subtitle">Your home base for registration, schedules, people, and coursework — all in one place.</p>
+        <p class="tagline" aria-hidden="true">May all beings be at ease</p>
+
+        <!-- TODO: replace # placeholder hrefs below with the real destination URLs -->
+        <div class="button-row">
+          <a class="btn" href="#">Course Registration</a>
+          <a class="btn" href="#">Class Schedule</a>
+          <a class="btn" href="#">Faculty and Staff</a>
+          <a class="btn" href="#">Calendar</a>
+          <a class="btn" href="#">Canvas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Announcements ============ -->
+    <section class="announcements" aria-labelledby="announcements-heading">
+      <div class="container narrow">
+        <h2 id="announcements-heading">Announcements</h2>
+        <svg class="squiggle small" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
+                fill="none" stroke="#AD8A2D" stroke-width="2.25" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Announcement cards are rendered here from announcements.js -->
+        <div id="announcement-feed" class="announcement-feed"></div>
+      </div>
+    </section>
+
+    <!-- ============ Support contacts ============ -->
+    <section class="support" aria-labelledby="support-heading">
+      <div class="container narrow">
+        <h2 id="support-heading">Need help?</h2>
+        <svg class="squiggle small" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
+                fill="none" stroke="#AD8A2D" stroke-width="2.25" stroke-linecap="round"/>
+        </svg>
+
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>Program Coordinator</h3>
+            <p>Questions about registration, requirements, or the program itself.</p>
+            <!-- TODO: replace with the real coordinator email -->
+            <a href="mailto:coordinator@sati.org">coordinator@sati.org</a>
+          </div>
+          <div class="support-card">
+            <h3>Tech / Canvas Support</h3>
+            <p>Trouble logging in to Canvas or accessing course materials.</p>
+            <!-- TODO: replace with the real support email -->
+            <a href="mailto:support@sati.org">support@sati.org</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-name">Sati Center for Buddhist Studies</p>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Sati Center for Buddhist Studies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="announcements.js"></script>
+  <script>
+    // Render the announcement feed from the ANNOUNCEMENTS array (announcements.js).
+    (function () {
+      const feed = document.getElementById('announcement-feed');
+      if (!feed || typeof ANNOUNCEMENTS === 'undefined') return;
+
+      ANNOUNCEMENTS.forEach(function (item) {
+        const card = document.createElement('article');
+        card.className = 'announcement-card';
+
+        const date = document.createElement('p');
+        date.className = 'announcement-date';
+        date.textContent = item.date;
+
+        const title = document.createElement('h3');
+        title.className = 'announcement-title';
+        title.textContent = item.title;
+
+        const body = document.createElement('div');
+        body.className = 'announcement-body';
+        body.innerHTML = item.body; // body supports basic HTML/links
+
+        card.append(date, title, body);
+        feed.appendChild(card);
+      });
+
+      // Keep the footer year current.
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+
+</body>
+</html>
