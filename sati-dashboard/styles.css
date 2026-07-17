@@ -4,14 +4,17 @@
    ========================================================================== */
 
 :root {
-  --gold: #AD8A2D;
-  --cream: #F6EEDE;
-  --navy: #1C2B4B;
-  --slate: #3D4B5C;
+  /* Palette drawn from the Sati Center certificate */
+  --teal: #3F7576;       /* wordmark and accents */
+  --olive: #A9A15C;      /* certificate border gold-olive, squiggles */
+  --gold: #C9A24B;       /* dharma-wheel gold, used sparingly */
+  --cream: #FAF5E7;      /* certificate parchment */
+  --navy: #2E4F49;       /* deep green-teal for headings (was navy) */
+  --slate: #3E5550;      /* body text, green-grey */
   --white: #FFFFFF;
   --page-bg: #EFEFEC; /* light grey page background */
-  --border: rgba(28, 43, 75, 0.75); /* thin dark button border */
-  --hairline: #E4DCC8;              /* subtle card/footer borders */
+  --border: rgba(46, 79, 73, 0.75); /* thin dark input border */
+  --hairline: #E2DECC;              /* subtle card/footer borders */
 
   /* Fonts follow the ICP faculty portal: an elegant display serif for
      headings, a readable old-style serif for body, nav, and buttons. */
@@ -57,7 +60,7 @@ h3 {
 }
 
 a {
-  color: var(--gold);
+  color: var(--teal);
 }
 
 a:focus-visible,
@@ -164,7 +167,7 @@ html.locked body > *:not(.gate) {
    ========================================================================== */
 
 .announcement-bar {
-  background: var(--gold);
+  background: var(--teal);
   color: var(--white);
   text-align: center;
   font-size: 0.875rem;
@@ -180,7 +183,7 @@ html.locked body > *:not(.gate) {
 
 .site-header {
   background: var(--white);
-  border-bottom: 1px solid rgba(28, 43, 75, 0.08);
+  border-bottom: 1px solid rgba(46, 79, 73, 0.08);
   padding: 1.25rem 0;
 }
 
@@ -215,7 +218,7 @@ html.locked body > *:not(.gate) {
   font-family: var(--font-serif);
   font-weight: 500;
   font-size: 1.5rem;
-  color: var(--navy);
+  color: var(--teal);
 }
 
 .logo-sub {
@@ -241,7 +244,7 @@ html.locked body > *:not(.gate) {
 }
 
 .site-nav a:hover {
-  border-bottom-color: var(--gold);
+  border-bottom-color: var(--teal);
 }
 
 /* ==========================================================================
@@ -275,7 +278,7 @@ html.locked body > *:not(.gate) {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--teal);
   margin-bottom: 0.25rem;
 }
 
@@ -288,7 +291,7 @@ html.locked body > *:not(.gate) {
 .btn-ext::after {
   content: "\2197\FE0E";
   margin-left: auto;
-  color: var(--gold);
+  color: var(--teal);
 }
 
 /* ==========================================================================
@@ -350,7 +353,7 @@ html.locked body > *:not(.gate) {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--teal);
   margin-bottom: 1rem;
 }
 
@@ -387,9 +390,9 @@ html.locked body > *:not(.gate) {
   align-items: center;
   gap: 0.625rem;
   background: var(--white);
-  border: 1px solid rgba(28, 43, 75, 0.1);
+  border: 1px solid rgba(46, 79, 73, 0.1);
   border-radius: 999px;
-  box-shadow: 0 1px 2px rgba(28, 43, 75, 0.06), 0 3px 8px rgba(28, 43, 75, 0.07);
+  box-shadow: 0 1px 2px rgba(46, 79, 73, 0.06), 0 3px 8px rgba(46, 79, 73, 0.07);
   color: var(--navy);
   text-decoration: none;
   font-size: 1.0625rem;
@@ -399,9 +402,9 @@ html.locked body > *:not(.gate) {
 }
 
 .btn:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  box-shadow: 0 2px 4px rgba(28, 43, 75, 0.08), 0 6px 14px rgba(28, 43, 75, 0.12);
+  border-color: var(--teal);
+  color: var(--teal);
+  box-shadow: 0 2px 4px rgba(46, 79, 73, 0.08), 0 6px 14px rgba(46, 79, 73, 0.12);
   transform: translateY(-1px);
 }
 
@@ -409,7 +412,7 @@ html.locked body > *:not(.gate) {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  color: var(--gold);
+  color: var(--teal);
 }
 
 /* ==========================================================================
@@ -437,7 +440,7 @@ html.locked body > *:not(.gate) {
 .announcement-card {
   background: var(--white);
   border: 1px solid var(--hairline);
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid var(--teal);
   border-radius: 0 8px 8px 0;
   padding: 1.5rem 1.75rem;
 }
@@ -447,7 +450,7 @@ html.locked body > *:not(.gate) {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--teal);
   margin-bottom: 0.25rem;
 }
 
@@ -457,7 +460,7 @@ html.locked body > *:not(.gate) {
 }
 
 .announcement-body a {
-  color: var(--gold);
+  color: var(--teal);
 }
 
 /* ==========================================================================
