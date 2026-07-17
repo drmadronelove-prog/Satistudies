@@ -31,6 +31,6 @@ const ANNOUNCEMENTS = [
   {
     date: "June 12, 2026",
     title: "Welcome to the New Program Dashboard",
-    body: "This page is your home base for the certificate program — registration, schedules, faculty contacts, and Canvas access are all one click away. Bookmark it!"
+    body: "This page is your home base for the certificate program: registration, schedules, faculty contacts, and Canvas access are all one click away. Bookmark it!"
   }
 ];
