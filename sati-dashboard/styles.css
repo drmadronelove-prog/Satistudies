@@ -286,14 +286,6 @@ html.locked body > *:not(.gate) {
   text-align: left;
 }
 
-/* External links get a small outward arrow.
-   \FE0E forces text rendering so it never shows as an emoji glyph. */
-.btn-ext::after {
-  content: "\2197\FE0E";
-  margin-left: auto;
-  color: var(--teal);
-}
-
 /* ==========================================================================
    Hero
    ========================================================================== */

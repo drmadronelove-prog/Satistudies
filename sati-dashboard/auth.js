@@ -60,7 +60,7 @@
           document.documentElement.classList.remove("locked");
           gate.remove();
         } else {
-          error.textContent = "That password isn’t right — please try again.";
+          error.textContent = "That password is not right. Please try again.";
           input.value = "";
           input.focus();
         }
