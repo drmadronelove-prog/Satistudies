@@ -1,0 +1,5 @@
+# Netlify configuration for the Sati Certificate Program dashboard.
+# The site is static — no build step; just publish the sati-dashboard folder.
+
+[build]
+  publish = "sati-dashboard"

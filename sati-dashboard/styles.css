@@ -65,6 +65,98 @@ button:focus-visible {
 }
 
 /* ==========================================================================
+   Password gate (see auth.js)
+   ========================================================================== */
+
+/* While locked, hide everything except the gate overlay. */
+html.locked body > *:not(.gate) {
+  visibility: hidden;
+}
+
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+  padding: 1.5rem;
+}
+
+.gate-box {
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+}
+
+.gate-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--navy);
+}
+
+.gate-name span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.gate-box h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.gate-note {
+  margin-bottom: 1.5rem;
+}
+
+.gate-box input {
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: var(--navy);
+  text-align: center;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.gate-box input:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.gate-box .btn {
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.gate-error {
+  color: #8C2F1B;
+  font-size: 0.9375rem;
+  margin-top: 1rem;
+  min-height: 1.5em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
    Announcement bar
    ========================================================================== */
 
