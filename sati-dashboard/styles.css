@@ -248,7 +248,39 @@ html.locked body > *:not(.gate) {
 
 .hero {
   text-align: center;
-  padding: 5rem 0 5.5rem;
+  padding: 3rem 0 5.5rem;
+}
+
+/* ---- Hero image card (candlelit Buddha backdrop) ---- */
+
+.hero-card {
+  background:
+    linear-gradient(rgba(12, 15, 24, 0.35), rgba(12, 15, 24, 0.35)),
+    url("buddha.jpg") center 58% / cover no-repeat;
+  border-radius: 20px;
+  padding: 5rem 2rem 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-card h1 {
+  color: var(--white);
+}
+
+.hero-card .eyebrow,
+.hero-card .tagline {
+  color: #D9BE77; /* lightened gold for contrast on the dark photo */
+}
+
+.hero-card .squiggle path {
+  stroke: #D9BE77;
+}
+
+.hero-card .subtitle {
+  color: var(--cream);
+}
+
+.hero-card .tagline {
+  margin-bottom: 0;
 }
 
 .eyebrow {
