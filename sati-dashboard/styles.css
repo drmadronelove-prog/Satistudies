@@ -303,20 +303,22 @@ html.locked body > *:not(.gate) {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  background: #060606; /* matches the photo's black, so the fit never shows seams */
   text-align: left;
-  padding: 5rem 45% 4.5rem 3rem;
+  padding: 4.5rem 42% 4.5rem 3rem;
   margin-bottom: 3rem;
 }
 
 /* The photo has the statue on the left, so mirror it to put the statue on
-   the right and leave the black space on the left for the text. */
+   the right and leave the black space on the left for the text. `contain`
+   keeps the whole statue in frame; the card's black background fills the rest. */
 .hero-card::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)),
-    url("buddha2.jpg") left center / cover no-repeat;
+    linear-gradient(rgba(8, 8, 8, 0.12), rgba(8, 8, 8, 0.12)),
+    url("buddha2.jpg") left center / contain no-repeat;
   transform: scaleX(-1);
 }
 
