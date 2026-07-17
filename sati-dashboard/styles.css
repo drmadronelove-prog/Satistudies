@@ -12,8 +12,10 @@
   --border: rgba(28, 43, 75, 0.75); /* thin dark button border */
   --hairline: #E4DCC8;              /* subtle card/footer borders */
 
+  /* Fonts follow the ICP faculty portal: an elegant display serif for
+     headings, a readable old-style serif for body, nav, and buttons. */
   --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "EB Garamond", Georgia, serif; /* body/nav/buttons */
   --font-script: "Great Vibes", cursive;
 
   --max-width: 1100px;
@@ -29,7 +31,7 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--slate);
@@ -98,7 +100,7 @@ html.locked body > *:not(.gate) {
 
 .gate-name span {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.75rem;
   letter-spacing: 0.06em;
 }
