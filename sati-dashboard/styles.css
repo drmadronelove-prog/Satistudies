@@ -250,22 +250,17 @@ html.locked body > *:not(.gate) {
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.5rem;
   align-items: start;
   padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
 
-/* Quicklinks bar sits on the right, top-aligned with the hero image card */
+/* Quicklinks bar on the left, top-aligned with the hero image card */
 .sidebar {
-  order: 2;
   position: sticky;
   top: 1.5rem;
-}
-
-.main-col {
-  order: 1;
 }
 
 .sidebar nav {
@@ -312,7 +307,7 @@ html.locked body > *:not(.gate) {
   border-radius: 20px;
   background: #060606; /* matches the photo's black, so the fit never shows seams */
   text-align: left;
-  padding: 4.5rem 42% 4.5rem 3rem;
+  padding: 4.5rem 50% 4.5rem 3rem; /* wide right padding keeps text clear of the statue */
   margin-bottom: 3rem;
 }
 
@@ -534,9 +529,7 @@ html.locked body > *:not(.gate) {
     gap: 2rem;
   }
 
-  /* Single column: quicklinks return to the top, above the content */
   .sidebar {
-    order: 0;
     position: static;
   }
 
