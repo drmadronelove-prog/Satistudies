@@ -17,7 +17,6 @@
      headings, a readable old-style serif for body, nav, and buttons. */
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-body: "EB Garamond", Georgia, serif; /* body/nav/buttons */
-  --font-script: "Great Vibes", cursive;
 
   --max-width: 1100px;
 }
@@ -180,7 +179,8 @@ html.locked body > *:not(.gate) {
    ========================================================================== */
 
 .site-header {
-  background: var(--cream);
+  background: var(--white);
+  border-bottom: 1px solid rgba(28, 43, 75, 0.08);
   padding: 1.25rem 0;
 }
 
@@ -250,16 +250,22 @@ html.locked body > *:not(.gate) {
 
 .layout {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 280px;
   gap: 2.5rem;
   align-items: start;
   padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
 
+/* Quicklinks bar sits on the right, top-aligned with the hero image card */
 .sidebar {
+  order: 2;
   position: sticky;
   top: 1.5rem;
+}
+
+.main-col {
+  order: 1;
 }
 
 .sidebar nav {
@@ -282,9 +288,10 @@ html.locked body > *:not(.gate) {
   text-align: left;
 }
 
-/* External links get a small outward arrow */
+/* External links get a small outward arrow.
+   \FE0E forces text rendering so it never shows as an emoji glyph. */
 .btn-ext::after {
-  content: "↗";
+  content: "\2197\FE0E";
   margin-left: auto;
   color: var(--gold);
 }
@@ -331,29 +338,16 @@ html.locked body > *:not(.gate) {
   margin: 0;
 }
 
-.hero-card .squiggle {
-  margin: 1.5rem 0;
-}
-
 .hero-card .subtitle {
-  margin: 0 0 0.5rem;
+  margin: 1.25rem 0 0;
 }
 
-.hero-card .eyebrow,
-.hero-card .tagline {
+.hero-card .eyebrow {
   color: #D9BE77; /* lightened gold for contrast on the dark photo */
-}
-
-.hero-card .squiggle path {
-  stroke: #D9BE77;
 }
 
 .hero-card .subtitle {
   color: var(--cream);
-}
-
-.hero-card .tagline {
-  margin-bottom: 0;
 }
 
 .eyebrow {
@@ -389,13 +383,6 @@ html.locked body > *:not(.gate) {
   font-size: 1.1875rem;
   max-width: 48ch;
   margin: 0 auto 0.5rem;
-}
-
-.tagline {
-  font-family: var(--font-script);
-  font-size: 1.625rem;
-  color: var(--gold);
-  margin-bottom: 2.75rem;
 }
 
 /* ---- Buttons: soft rounded pills, ICP-portal style ---- */
@@ -547,7 +534,9 @@ html.locked body > *:not(.gate) {
     gap: 2rem;
   }
 
+  /* Single column: quicklinks return to the top, above the content */
   .sidebar {
+    order: 0;
     position: static;
   }
 
@@ -567,12 +556,8 @@ html.locked body > *:not(.gate) {
     margin: 0 auto;
   }
 
-  .hero-card .squiggle {
-    margin: 1.5rem auto;
-  }
-
   .hero-card .subtitle {
-    margin: 0 auto 0.5rem;
+    margin: 1.25rem auto 0;
   }
 }
 
