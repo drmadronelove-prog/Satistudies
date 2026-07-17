@@ -203,7 +203,7 @@ html.locked body > *:not(.gate) {
 }
 
 .logo-mark {
-  width: 48px;
+  width: auto;
   height: 48px;
   flex-shrink: 0;
 }
