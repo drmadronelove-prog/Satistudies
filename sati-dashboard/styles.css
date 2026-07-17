@@ -483,9 +483,9 @@ html.locked body > *:not(.gate) {
    Footer
    ========================================================================== */
 
+/* Teal footer bookends the teal header */
 .site-footer {
-  background: var(--cream);
-  border-top: 1px solid var(--hairline);
+  background: var(--teal);
   text-align: center;
   padding: 2.5rem 0;
 }
@@ -493,12 +493,13 @@ html.locked body > *:not(.gate) {
 .footer-name {
   font-family: var(--font-serif);
   font-size: 1.25rem;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 0.25rem;
 }
 
 .footer-copy {
   font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ==========================================================================
@@ -526,7 +527,7 @@ html.locked body > *:not(.gate) {
     inset: 0;
     width: auto;
     background:
-      linear-gradient(rgba(8, 8, 8, 0.45), rgba(8, 8, 8, 0.45)),
+      linear-gradient(rgba(8, 8, 8, 0.32), rgba(8, 8, 8, 0.32)),
       url("buddha2.jpg") 30% center / cover no-repeat;
   }
 
