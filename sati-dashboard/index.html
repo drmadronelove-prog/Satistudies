@@ -63,11 +63,34 @@
     </div>
   </header>
 
-  <main>
+  <main class="container layout">
+
+    <!-- ============ Sidebar — all buttons lined up on the left, ICP-style ============ -->
+    <aside class="sidebar">
+      <nav aria-label="Quicklinks">
+        <p class="sidebar-label">Quicklinks</p>
+        <!-- TODO: replace # placeholder hrefs below with the real destination URLs -->
+        <a class="btn" href="#">Course Registration</a>
+        <a class="btn" href="#">Class Schedule</a>
+        <a class="btn" href="#">Faculty and Staff</a>
+        <a class="btn" href="#">Calendar</a>
+        <a class="btn" href="#">Canvas</a>
+      </nav>
+      <nav aria-label="External resources">
+        <p class="sidebar-label">External</p>
+        <!-- TODO: replace # with the real Sati Library URL -->
+        <a class="btn btn-ext" href="#">Sati Library</a>
+        <a class="btn btn-ext" href="https://www.insightmeditationcenter.org/">Insight Meditation Center</a>
+        <a class="btn btn-ext" href="https://www.audiodharma.org/">Audiodharma</a>
+        <a class="btn btn-ext" href="https://www.insightretreatcenter.org/">Insight Retreat Center</a>
+      </nav>
+    </aside>
+
+    <!-- ============ Main column ============ -->
+    <div class="main-col">
 
     <!-- ============ Hero ============ -->
     <section class="hero">
-      <div class="container">
 
         <!-- Candlelit Buddha photo (buddha.jpg) as the hero backdrop, ICP-portal style -->
         <div class="hero-card">
@@ -83,30 +106,10 @@
           <p class="subtitle">Your home base for registration, schedules, people, and coursework — all in one place.</p>
           <p class="tagline" aria-hidden="true">May all beings be at ease</p>
         </div>
-
-        <!-- TODO: replace # placeholder hrefs below with the real destination URLs -->
-        <div class="button-row">
-          <a class="btn" href="#">Course Registration</a>
-          <a class="btn" href="#">Class Schedule</a>
-          <a class="btn" href="#">Faculty and Staff</a>
-          <a class="btn" href="#">Calendar</a>
-          <a class="btn" href="#">Canvas</a>
-        </div>
-
-        <!-- Related resources — lined up on the left -->
-        <div class="resource-links" aria-label="Related resources">
-          <!-- TODO: replace # with the real Sati Library URL -->
-          <a class="btn" href="#">Sati Library</a>
-          <a class="btn" href="https://www.insightmeditationcenter.org/">Insight Meditation Center</a>
-          <a class="btn" href="https://www.audiodharma.org/">Audiodharma</a>
-          <a class="btn" href="https://www.insightretreatcenter.org/">Insight Retreat Center</a>
-        </div>
-      </div>
     </section>
 
     <!-- ============ Announcements ============ -->
     <section class="announcements" aria-labelledby="announcements-heading">
-      <div class="container narrow">
         <h2 id="announcements-heading">Announcements</h2>
         <svg class="squiggle small" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
@@ -115,12 +118,10 @@
 
         <!-- Announcement cards are rendered here from announcements.js -->
         <div id="announcement-feed" class="announcement-feed"></div>
-      </div>
     </section>
 
     <!-- ============ Support contacts ============ -->
     <section class="support" aria-labelledby="support-heading">
-      <div class="container narrow">
         <h2 id="support-heading">Need help?</h2>
         <svg class="squiggle small" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
@@ -141,8 +142,9 @@
             <a href="mailto:support@sati.org">support@sati.org</a>
           </div>
         </div>
-      </div>
     </section>
+
+    </div><!-- /.main-col -->
 
   </main>
 

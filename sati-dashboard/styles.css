@@ -9,6 +9,7 @@
   --navy: #1C2B4B;
   --slate: #3D4B5C;
   --white: #FFFFFF;
+  --page-bg: #EFEFEC; /* light grey page background */
   --border: rgba(28, 43, 75, 0.75); /* thin dark button border */
   --hairline: #E4DCC8;              /* subtle card/footer borders */
 
@@ -35,7 +36,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--slate);
-  background: var(--white);
+  background: var(--page-bg);
 }
 
 .container {
@@ -243,27 +244,80 @@ html.locked body > *:not(.gate) {
 }
 
 /* ==========================================================================
+   Sidebar layout (ICP-style: buttons stacked on the left, content right)
+   ========================================================================== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.sidebar-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.sidebar .btn {
+  text-align: left;
+}
+
+/* External links get a small outward arrow */
+.btn-ext::after {
+  content: "↗";
+  float: right;
+}
+
+/* ==========================================================================
    Hero
    ========================================================================== */
 
 .hero {
   text-align: center;
-  padding: 3rem 0 5.5rem;
 }
 
-/* ---- Hero image card (candlelit Buddha backdrop) ---- */
+/* ---- Hero image card (Buddha-in-profile backdrop, text on the right) ---- */
 
 .hero-card {
   background:
-    linear-gradient(rgba(12, 15, 24, 0.35), rgba(12, 15, 24, 0.35)),
-    url("buddha.jpg") center 58% / cover no-repeat;
+    linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)),
+    url("buddha2.jpg") left center / cover no-repeat;
   border-radius: 20px;
-  padding: 5rem 2rem 4.5rem;
+  text-align: left;
+  padding: 5rem 3rem 4.5rem 42%;
   margin-bottom: 3rem;
 }
 
 .hero-card h1 {
   color: var(--white);
+  margin: 0;
+}
+
+.hero-card .squiggle {
+  margin: 1.5rem 0;
+}
+
+.hero-card .subtitle {
+  margin: 0 0 0.5rem;
 }
 
 .hero-card .eyebrow,
@@ -309,7 +363,7 @@ html.locked body > *:not(.gate) {
 
 .squiggle.small {
   width: 160px;
-  margin: 1rem auto 2.5rem;
+  margin: 1rem 0 2.5rem;
 }
 
 .subtitle {
@@ -325,17 +379,10 @@ html.locked body > *:not(.gate) {
   margin-bottom: 2.75rem;
 }
 
-/* ---- Hero buttons ---- */
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
+/* ---- Buttons ---- */
 
 .btn {
-  display: inline-block;
+  display: block;
   background: var(--white);
   border: 1.5px solid var(--border);
   border-radius: 8px;
@@ -355,29 +402,13 @@ html.locked body > *:not(.gate) {
   color: var(--white);
 }
 
-/* ---- Related resource links: a left-aligned column of buttons ---- */
-
-.resource-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  text-align: left;
-}
-
-.resource-links .btn {
-  min-width: 300px;
-  text-align: left;
-}
-
 /* ==========================================================================
    Announcements
    ========================================================================== */
 
 .announcements {
-  padding: 3.5rem 0 4.5rem;
-  text-align: center;
+  padding: 1rem 0 2rem;
+  text-align: left;
 }
 
 .announcements h2,
@@ -424,8 +455,8 @@ html.locked body > *:not(.gate) {
    ========================================================================== */
 
 .support {
-  padding: 3.5rem 0 5rem;
-  text-align: center;
+  padding: 1rem 0;
+  text-align: left;
 }
 
 .support-grid {
@@ -481,6 +512,39 @@ html.locked body > *:not(.gate) {
    Responsive
    ========================================================================== */
 
+@media (max-width: 900px) {
+  /* Sidebar stacks above the content as a single column */
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  /* Center the hero text over the photo on narrow screens */
+  .hero-card {
+    background:
+      linear-gradient(rgba(8, 8, 8, 0.45), rgba(8, 8, 8, 0.45)),
+      url("buddha2.jpg") 30% center / cover no-repeat;
+    text-align: center;
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .hero-card h1 {
+    margin: 0 auto;
+  }
+
+  .hero-card .squiggle {
+    margin: 1.5rem auto;
+  }
+
+  .hero-card .subtitle {
+    margin: 0 auto 0.5rem;
+  }
+}
+
 @media (max-width: 720px) {
   .header-inner {
     flex-direction: column;
@@ -489,33 +553,6 @@ html.locked body > *:not(.gate) {
 
   .site-nav {
     justify-content: center;
-  }
-
-  .hero {
-    padding: 3.5rem 0 4rem;
-  }
-
-  .button-row {
-    flex-direction: column;
-    align-items: stretch;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .btn {
-    text-align: center;
-  }
-
-  .resource-links {
-    align-items: stretch;
-    max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .resource-links .btn {
-    min-width: 0;
-    text-align: center;
   }
 
   .support-grid {
