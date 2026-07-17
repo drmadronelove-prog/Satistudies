@@ -136,6 +136,7 @@ html.locked body > *:not(.gate) {
 
 .gate-box .btn {
   width: 100%;
+  justify-content: center;
   cursor: pointer;
   font-family: inherit;
 }
@@ -284,7 +285,8 @@ html.locked body > *:not(.gate) {
 /* External links get a small outward arrow */
 .btn-ext::after {
   content: "↗";
-  float: right;
+  margin-left: auto;
+  color: var(--gold);
 }
 
 /* ==========================================================================
@@ -295,16 +297,31 @@ html.locked body > *:not(.gate) {
   text-align: center;
 }
 
-/* ---- Hero image card (Buddha-in-profile backdrop, text on the right) ---- */
+/* ---- Hero image card: statue on the right, text in the black space left ---- */
 
 .hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  text-align: left;
+  padding: 5rem 45% 4.5rem 3rem;
+  margin-bottom: 3rem;
+}
+
+/* The photo has the statue on the left, so mirror it to put the statue on
+   the right and leave the black space on the left for the text. */
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
     linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)),
     url("buddha2.jpg") left center / cover no-repeat;
-  border-radius: 20px;
-  text-align: left;
-  padding: 5rem 3rem 4.5rem 42%;
-  margin-bottom: 3rem;
+  transform: scaleX(-1);
+}
+
+.hero-card > * {
+  position: relative;
 }
 
 .hero-card h1 {
@@ -379,27 +396,36 @@ html.locked body > *:not(.gate) {
   margin-bottom: 2.75rem;
 }
 
-/* ---- Buttons ---- */
+/* ---- Buttons: soft rounded pills, ICP-portal style ---- */
 
 .btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
   background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
+  border: 1px solid rgba(28, 43, 75, 0.1);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(28, 43, 75, 0.06), 0 3px 8px rgba(28, 43, 75, 0.07);
   color: var(--navy);
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  padding: 1rem 1.75rem;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding: 0.8125rem 1.5rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .btn:hover {
-  background: var(--gold);
   border-color: var(--gold);
-  color: var(--white);
+  color: var(--gold);
+  box-shadow: 0 2px 4px rgba(28, 43, 75, 0.08), 0 6px 14px rgba(28, 43, 75, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold);
 }
 
 /* ==========================================================================
@@ -525,11 +551,14 @@ html.locked body > *:not(.gate) {
 
   /* Center the hero text over the photo on narrow screens */
   .hero-card {
+    text-align: center;
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .hero-card::before {
     background:
       linear-gradient(rgba(8, 8, 8, 0.45), rgba(8, 8, 8, 0.45)),
       url("buddha2.jpg") 30% center / cover no-repeat;
-    text-align: center;
-    padding: 3.5rem 1.5rem 3rem;
   }
 
   .hero-card h1 {
