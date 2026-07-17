@@ -321,6 +321,22 @@ html.locked body > *:not(.gate) {
   color: var(--white);
 }
 
+/* ---- Related resource links: a left-aligned column of buttons ---- */
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.resource-links .btn {
+  min-width: 300px;
+  text-align: left;
+}
+
 /* ==========================================================================
    Announcements
    ========================================================================== */
@@ -453,6 +469,18 @@ html.locked body > *:not(.gate) {
   }
 
   .btn {
+    text-align: center;
+  }
+
+  .resource-links {
+    align-items: stretch;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resource-links .btn {
+    min-width: 0;
     text-align: center;
   }
 
