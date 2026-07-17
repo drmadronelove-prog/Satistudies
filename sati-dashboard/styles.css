@@ -163,28 +163,16 @@ html.locked body > *:not(.gate) {
 }
 
 /* ==========================================================================
-   Announcement bar
-   ========================================================================== */
-
-.announcement-bar {
-  background: var(--teal);
-  color: var(--white);
-  text-align: center;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-}
-
-/* ==========================================================================
    Header
    ========================================================================== */
 
 .site-header {
-  background: var(--white);
-  border-bottom: 1px solid rgba(46, 79, 73, 0.08);
+  background: var(--teal);
   padding: 1.25rem 0;
+}
+
+.site-header a:focus-visible {
+  outline-color: var(--white);
 }
 
 .header-inner {
@@ -218,13 +206,13 @@ html.locked body > *:not(.gate) {
   font-family: var(--font-serif);
   font-weight: 500;
   font-size: 1.5rem;
-  color: var(--teal);
+  color: var(--white);
 }
 
 .logo-sub {
   font-size: 0.75rem;
   letter-spacing: 0.06em;
-  color: var(--slate);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .site-nav {
@@ -234,7 +222,7 @@ html.locked body > *:not(.gate) {
 }
 
 .site-nav a {
-  color: var(--navy);
+  color: var(--cream);
   text-decoration: none;
   font-size: 0.9375rem;
   font-weight: 600;
@@ -244,7 +232,8 @@ html.locked body > *:not(.gate) {
 }
 
 .site-nav a:hover {
-  border-bottom-color: var(--teal);
+  color: var(--white);
+  border-bottom-color: var(--cream);
 }
 
 /* ==========================================================================
