@@ -38,6 +38,6 @@ jobs:
         with:
           # Upload entire repository
           path: './sati-dashboard'
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
