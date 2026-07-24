@@ -163,6 +163,20 @@ html.locked body > *:not(.gate) {
 }
 
 /* ==========================================================================
+   Embed mode (?embed=1): hide the site chrome inside an iframe
+   ========================================================================== */
+
+html.embedded .site-header,
+html.embedded .site-footer {
+  display: none;
+}
+
+html.embedded .layout {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+/* ==========================================================================
    Header
    ========================================================================== */
 

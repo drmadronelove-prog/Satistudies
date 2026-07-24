@@ -15,6 +15,14 @@
 
   <!-- Password gate — loaded before the page paints so content stays hidden until unlocked -->
   <script src="auth.js"></script>
+
+  <!-- Embed mode: add ?embed=1 to the URL inside an iframe to hide the
+       site header and footer, e.g. src="https://your-site.netlify.app/?embed=1" -->
+  <script>
+    if (new URLSearchParams(location.search).has("embed")) {
+      document.documentElement.classList.add("embedded");
+    }
+  </script>
 </head>
 <body>
 
