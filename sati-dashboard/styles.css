@@ -302,28 +302,28 @@ html.embedded .layout {
   text-align: center;
 }
 
-/* ---- Hero image card: statue on the right, text in the black space left ---- */
+/* ---- Hero image card: lotus photo on the right, text on the left ---- */
 
 .hero-card {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  background: #060606; /* matches the photo's black, so the fit never shows seams */
+  background: #99A9A4; /* matches the lotus photo's backdrop, so the fit never shows seams */
   text-align: left;
-  padding: 4.5rem 3rem 4.5rem calc(44% + 2.5rem); /* text sits right of the photo panel */
+  padding: 4.5rem calc(44% + 2.5rem) 4.5rem 3rem; /* text sits left of the photo panel */
   margin-bottom: 3rem;
 }
 
-/* The photo fills the card's left panel edge to edge, cropped to feature
-   the statue's head, and fades into the card's black on its right edge. */
+/* The photo fills the card's right panel edge to edge, cropped to feature
+   the lotus bloom, and fades into the card's backdrop tone on its left edge. */
 .hero-card::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
+  inset: 0 0 0 auto;
   width: 44%;
   background:
-    linear-gradient(90deg, rgba(6, 6, 6, 0) 65%, #060606 100%),
-    url("buddha2.jpg") 35% center / cover no-repeat;
+    linear-gradient(90deg, #99A9A4 0%, rgba(153, 169, 164, 0) 35%),
+    url("jonas-gerlach-PKd6IiD3DEk-unsplash.jpg") 62% 45% / cover no-repeat;
 }
 
 .hero-card > * {
@@ -331,20 +331,17 @@ html.embedded .layout {
 }
 
 .hero-card h1 {
-  color: var(--white);
+  color: var(--navy);
   margin: 0;
 }
 
 .hero-card .subtitle {
   margin: 1.25rem 0 0;
+  color: var(--slate);
 }
 
 .hero-card .eyebrow {
-  color: #D9BE77; /* lightened gold for contrast on the dark photo */
-}
-
-.hero-card .subtitle {
-  color: var(--cream);
+  color: var(--teal);
 }
 
 .eyebrow {
@@ -697,8 +694,8 @@ html.embedded .layout {
     inset: 0;
     width: auto;
     background:
-      linear-gradient(rgba(8, 8, 8, 0.32), rgba(8, 8, 8, 0.32)),
-      url("buddha2.jpg") 30% center / cover no-repeat;
+      linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+      url("jonas-gerlach-PKd6IiD3DEk-unsplash.jpg") 65% 40% / cover no-repeat;
   }
 
   .hero-card h1 {
