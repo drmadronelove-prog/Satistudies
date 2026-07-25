@@ -348,20 +348,13 @@ html.embedded .layout {
 }
 
 .eyebrow {
+  font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--teal);
   margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
-  font-weight: 400;
-  line-height: 1.15;
-  max-width: 18ch;
-  margin: 0 auto;
 }
 
 .squiggle {
@@ -382,15 +375,14 @@ html.embedded .layout {
   margin: 0 auto 0.5rem;
 }
 
-/* ---- Buttons: soft rounded pills, ICP-portal style ---- */
+/* ---- Buttons: soft rounded tiles, ICP-portal style ---- */
 
 .btn {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
   background: var(--white);
   border: 1px solid rgba(46, 79, 73, 0.1);
-  border-radius: 999px;
+  border-radius: 14px;
   box-shadow: 0 1px 2px rgba(46, 79, 73, 0.06), 0 3px 8px rgba(46, 79, 73, 0.07);
   color: var(--navy);
   text-decoration: none;
@@ -405,13 +397,6 @@ html.embedded .layout {
   color: var(--teal);
   box-shadow: 0 2px 4px rgba(46, 79, 73, 0.08), 0 6px 14px rgba(46, 79, 73, 0.12);
   transform: translateY(-1px);
-}
-
-.btn-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  color: var(--teal);
 }
 
 /* ==========================================================================
@@ -519,6 +504,172 @@ html.embedded .layout {
 .footer-copy {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.75);
+}
+
+/* ==========================================================================
+   Simple content pages (Theravada Studies, Spiritual Care, Faculty, Library)
+   ========================================================================== */
+
+.page-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--teal);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.page-content h1 {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.page-content .squiggle {
+  margin: 1.25rem 0 2rem;
+}
+
+.page-content .page-intro {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.page-content h2 {
+  font-size: 1.625rem;
+  font-weight: 500;
+  margin: 2.25rem 0 0.75rem;
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+}
+
+.page-content ul {
+  margin: 0 0 1rem 1.25rem;
+}
+
+.page-content li {
+  margin-bottom: 0.5rem;
+}
+
+.page-content a {
+  color: var(--teal);
+}
+
+/* Note card used for pending-content placeholders */
+.page-note {
+  background: var(--cream);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+}
+
+/* Simple external-link list, used on the Sati Library page */
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-left: 4px solid var(--teal);
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+}
+
+.link-card:hover {
+  border-left-color: var(--gold);
+}
+
+.link-card h2 {
+  margin: 0 0 0.375rem;
+  color: var(--navy);
+}
+
+.link-card p {
+  margin: 0;
+  color: var(--slate);
+}
+
+/* Course schedule entries */
+.course-item {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hairline);
+  margin-top: 1.75rem;
+}
+
+.course-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.course-item h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.course-units {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--slate);
+}
+
+.course-meta {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 0.75rem;
+}
+
+.course-item h3 {
+  font-size: 1.0625rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.seminar-list {
+  margin-left: 1.25rem;
+}
+
+.seminar-list li {
+  margin-bottom: 1.25rem;
+  line-height: 1.55;
+}
+
+/* Faculty roster grid */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.faculty-card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.25rem;
+}
+
+.faculty-card .faculty-role {
+  color: var(--teal);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 /* ==========================================================================

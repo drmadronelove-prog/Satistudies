@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sati Library — Sati Certificate Program</title>
+  <meta name="description" content="Reading and reference resources for the Sati Certificate Program: Inquiring Mind, sutta translations, and Pali term lists.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="auth.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="https://www.sati.org/" aria-label="Sati Center for Buddhist Studies">
+        <img class="logo-mark" src="logo.png" alt="">
+        <span class="logo-text">
+          <span class="logo-name">Sati Center</span>
+          <span class="logo-sub">for Buddhist Studies</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <!-- TODO: replace # with real URLs -->
+        <a href="#">Canvas</a>
+        <a href="https://pci.jotform.com/form/261964969697081">Course Registration</a>
+        <a href="#">Calendar</a>
+        <a href="class-schedule.html">Class Schedule</a>
+        <a href="faculty.html">Faculty and Staff</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <a class="back-link" href="index.html">&larr; Back to dashboard</a>
+
+    <h1>Sati Library</h1>
+    <svg class="squiggle" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
+            fill="none" stroke="#A9A15C" stroke-width="2.25" stroke-linecap="round"/>
+    </svg>
+
+    <p class="page-intro">Reading and reference resources for students in the certificate program.</p>
+
+    <div class="link-list">
+      <a class="link-card" href="https://inquiringmind.com/" target="_blank" rel="noopener">
+        <h2>Inquiring Mind</h2>
+        <p>A Semi-Annual Journal of the Vipassana Community, with decades of Dharma writing.</p>
+      </a>
+      <a class="link-card" href="https://sati.org/sutta-translations/" target="_blank" rel="noopener">
+        <h2>Sutta Translations</h2>
+        <p>Translations of Pali suttas from the Sati Center.</p>
+      </a>
+      <a class="link-card" href="https://www.insightmeditationcenter.org/dharma-lists-and-select-pali-terms/" target="_blank" rel="noopener">
+        <h2>Dharma Lists and Select Pali Terms</h2>
+        <p>Reference lists of core Dharma teachings and Pali vocabulary, from the Insight Meditation Center.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-name">Sati Center for Buddhist Studies</p>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Sati Center for Buddhist Studies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
