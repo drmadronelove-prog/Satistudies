@@ -225,6 +225,7 @@ html.embedded .layout {
   height: 52px;
   flex-shrink: 0;
   background: var(--cream);
+  border: 2px solid var(--gold);
   border-radius: 10px;
   padding: 7px 12px;
   box-sizing: content-box;
@@ -364,9 +365,9 @@ html.embedded .layout {
 .hero-rule {
   display: block;
   width: 64px;
-  height: 3px;
-  border-radius: 2px;
+  height: 8px;
   background: var(--gold);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
   margin: 1.5rem 0;
 }
 
