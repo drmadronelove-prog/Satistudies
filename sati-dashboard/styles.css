@@ -18,7 +18,7 @@
   --page-bg: #EFEFEC; /* light grey page background */
   --tile-bg: #EBE8DD;    /* a shade darker than white — button/tile surface */
   --tile-bg-top: #F6F4EB; /* lighter top of the tile's bevel gradient */
-  --sage-tint: #E9E6D6;  /* a light, warm grey-yellow tint of the hero card's sage green */
+  --sage-tint: #E3EAD8;  /* a light, warm grey-yellow shade of the hero card's sage green */
   --border: rgba(46, 79, 73, 0.75); /* thin dark input border */
   --hairline: #E2DECC;              /* subtle card/footer borders */
 
