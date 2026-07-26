@@ -535,7 +535,7 @@ html.embedded .layout {
 }
 
 .support-card {
-  background: var(--sage-tint);
+  background: var(--tag-registration-bg);
   border: 1px solid var(--hairline);
   border-radius: 8px;
   padding: 1.75rem 2rem;
