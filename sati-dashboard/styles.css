@@ -650,23 +650,28 @@ html.embedded .layout {
   line-height: 1.55;
 }
 
-/* Faculty roster grid */
-.faculty-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+/* Google Calendar embed */
+.calendar-embed-wrap {
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
-.faculty-card h2 {
-  font-size: 1.25rem;
-  margin: 0 0 0.25rem;
+.calendar-embed {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: 0;
 }
 
-.faculty-card .faculty-role {
-  color: var(--teal);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.calendar-subscribe {
+  margin-bottom: 0;
+}
+
+.calendar-subscribe .btn {
+  display: inline-flex;
+  width: auto;
 }
 
 /* ==========================================================================

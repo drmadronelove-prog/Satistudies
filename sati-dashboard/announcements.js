@@ -21,7 +21,7 @@ const ANNOUNCEMENTS = [
   {
     date: "July 10, 2026",
     title: "Spring Registration Now Open",
-    body: "Registration for the spring term is now open. Please complete your <a href=\"#\">course registration</a> by August 15 to secure your place."
+    body: "Registration for the spring term is now open. Please complete your <a href=\"https://pci.jotform.com/form/261964969697081\">course registration</a> by August 15 to secure your place."
   },
   {
     date: "June 28, 2026",

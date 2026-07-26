@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sati Library — Sati Certificate Program</title>
-  <meta name="description" content="Reading and reference resources for the Sati Certificate Program: Inquiring Mind, sutta translations, and Pali term lists.">
+  <title>Calendar — Sati Certificate Program</title>
+  <meta name="description" content="Class calendar for the Sati Certificate Program.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,28 +38,52 @@
   <main class="page-content">
     <a class="back-link" href="index.html">&larr; Back to dashboard</a>
 
-    <h1>Sati Library</h1>
+    <h1>Calendar</h1>
     <svg class="squiggle" viewBox="0 0 220 14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 8c14-8 22 6 36-1s20-7 34 0 24 6 38-1 22-6 36 1 24 7 36-1 26-7 36 1"
             fill="none" stroke="#A9A15C" stroke-width="2.25" stroke-linecap="round"/>
     </svg>
 
-    <p class="page-intro">Reading and reference resources for students in the certificate program.</p>
+    <!--
+      TODO: This embeds a real Google Calendar once one exists for the
+      program. To finish wiring this up:
 
-    <div class="link-list">
-      <a class="link-card" href="https://inquiringmind.com/" target="_blank" rel="noopener">
-        <h2>Inquiring Mind</h2>
-        <p>A Semi-Annual Journal of the Vipassana Community, with decades of Dharma writing.</p>
-      </a>
-      <a class="link-card" href="https://sati.org/sutta-translations/" target="_blank" rel="noopener">
-        <h2>Sutta Translations</h2>
-        <p>Translations of Pali suttas from the Sati Center.</p>
-      </a>
-      <a class="link-card" href="https://www.insightmeditationcenter.org/dharma-lists-and-select-pali-terms/" target="_blank" rel="noopener">
-        <h2>Dharma Lists and Select Pali Terms</h2>
-        <p>Reference lists of core Dharma teachings and Pali vocabulary, from the Insight Meditation Center.</p>
-      </a>
+        1. In Google Calendar, create (or open) the calendar you'll use
+           to post classes.
+        2. Settings and sharing > Access permissions > check
+           "Make available to public" (or share it with
+           "See all event details" if it should stay unlisted).
+        3. Settings and sharing > Integrate calendar > copy the
+           "Calendar ID" (looks like an email address, or a long string
+           ending in @group.calendar.google.com).
+        4. Send that Calendar ID here, and it replaces YOUR_CALENDAR_ID
+           in both the iframe src and the "Add to my calendar" link
+           below. Everything else on this page already works.
+
+      Once it's live: add a class by opening the calendar (in Google
+      Calendar, on the web or the app) and creating an event as usual —
+      it appears here automatically, no code changes needed.
+    -->
+    <div class="page-note">
+      This calendar isn&rsquo;t connected yet. It will show every class once a
+      Google Calendar ID is added here &mdash; see the comment in the page
+      source for the three-step setup.
     </div>
+
+    <div class="calendar-embed-wrap">
+      <iframe
+        class="calendar-embed"
+        src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FLos_Angeles"
+        title="Sati Certificate Program class calendar"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <p class="calendar-subscribe">
+      <a class="btn" href="https://calendar.google.com/calendar/render?cid=YOUR_CALENDAR_ID">
+        Add to my calendar
+      </a>
+    </p>
   </main>
 
   <footer class="site-footer">
