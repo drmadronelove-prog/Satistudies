@@ -5,7 +5,8 @@
 
 :root {
   /* Palette drawn from the Sati Center certificate */
-  --teal: #17332C;       /* deep forest green — header, footer, accents */
+  --teal: #17332C;       /* deep forest green — link/icon/accent color */
+  --header-bg: #1F4A40;  /* a shade lighter than --teal — header & footer */
   --sage: #71917C;       /* muted sage green — hero card */
   --sage-dim: #64826E;   /* sage, slightly deeper (hero card border/divider) */
   --olive: #A9A15C;      /* certificate border gold-olive */
@@ -15,6 +16,9 @@
   --slate: #3E5550;      /* body text, green-grey */
   --white: #FFFFFF;
   --page-bg: #EFEFEC; /* light grey page background */
+  --tile-bg: #EBE8DD;    /* a shade darker than white — button/tile surface */
+  --tile-bg-top: #F6F4EB; /* lighter top of the tile's bevel gradient */
+  --sage-tint: #E9E6D6;  /* a light, warm grey-yellow tint of the hero card's sage green */
   --border: rgba(46, 79, 73, 0.75); /* thin dark input border */
   --hairline: #E2DECC;              /* subtle card/footer borders */
 
@@ -191,7 +195,7 @@ html.embedded .layout {
    ========================================================================== */
 
 .site-header {
-  background: var(--teal);
+  background: var(--header-bg);
   padding: 1.25rem 0;
 }
 
@@ -253,7 +257,7 @@ html.embedded .layout {
 .site-nav a {
   color: var(--cream);
   text-decoration: none;
-  font-size: 0.9375rem;
+  font-size: 1.078rem; /* nav base (0.9375rem) + 15% */
   font-weight: 600;
   letter-spacing: 0.02em;
   padding: 0.25rem 0;
@@ -287,17 +291,21 @@ html.embedded .layout {
 .sidebar nav {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.7125rem; /* 0.75rem, 5% tighter */
   margin-bottom: 1.75rem;
 }
 
+/* Positioned above the nav's flow so the first tile's top edge
+   lines up with the hero card's top edge. */
 .sidebar-label {
+  position: absolute;
+  top: -2rem;
+  left: 0;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--teal);
-  margin-bottom: 0.25rem;
 }
 
 .sidebar .btn {
@@ -336,6 +344,8 @@ html.embedded .layout {
   flex: 1 1 45%;
   min-height: 280px;
   border-radius: 16px;
+  border: 3px solid var(--gold);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
   background: url("wilsan-u-aiUIs74ejx8-unsplash.jpg") 68% 45% / cover no-repeat;
 }
 
@@ -353,21 +363,11 @@ html.embedded .layout {
   margin-bottom: 0;
 }
 
-.hero-cta {
-  align-self: flex-start;
-  gap: 0.5rem;
-}
-
-.hero-cta svg {
-  width: 18px;
-  height: 18px;
-}
-
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 1.625rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--teal);
   margin-bottom: 1rem;
@@ -384,10 +384,14 @@ html.embedded .layout {
 .btn {
   display: flex;
   align-items: center;
-  background: var(--white);
-  border: 1px solid rgba(46, 79, 73, 0.1);
+  background: linear-gradient(180deg, var(--tile-bg-top) 0%, var(--tile-bg) 100%);
+  border: 1px solid rgba(46, 79, 73, 0.14);
   border-radius: 14px;
-  box-shadow: 0 1px 2px rgba(46, 79, 73, 0.06), 0 3px 8px rgba(46, 79, 73, 0.07);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),   /* top bevel highlight */
+    inset 0 -1px 0 rgba(46, 79, 73, 0.08),    /* bottom bevel edge */
+    0 1px 1px rgba(46, 79, 73, 0.1),          /* contact shadow */
+    0 6px 12px rgba(46, 79, 73, 0.14);        /* ambient lift */
   color: var(--navy);
   text-decoration: none;
   font-size: 1.0625rem;
@@ -399,8 +403,19 @@ html.embedded .layout {
 .btn:hover {
   border-color: var(--teal);
   color: var(--teal);
-  box-shadow: 0 2px 4px rgba(46, 79, 73, 0.08), 0 6px 14px rgba(46, 79, 73, 0.12);
-  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(46, 79, 73, 0.08),
+    0 2px 2px rgba(46, 79, 73, 0.1),
+    0 10px 18px rgba(46, 79, 73, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow:
+    inset 0 1px 2px rgba(46, 79, 73, 0.18),
+    0 1px 1px rgba(46, 79, 73, 0.08);
+  transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -516,7 +531,7 @@ html.embedded .layout {
 }
 
 .support-card {
-  background: var(--cream);
+  background: var(--sage-tint);
   border: 1px solid var(--hairline);
   border-radius: 8px;
   padding: 1.75rem 2rem;
@@ -541,7 +556,7 @@ html.embedded .layout {
 
 /* Teal footer bookends the teal header */
 .site-footer {
-  background: var(--teal);
+  background: var(--header-bg);
   text-align: center;
   padding: 2.5rem 0;
 }
@@ -738,7 +753,7 @@ html.embedded .layout {
   }
 
   .sidebar {
-    position: static;
+    position: relative;
   }
 
   /* Stack text above the photo on narrow screens */
