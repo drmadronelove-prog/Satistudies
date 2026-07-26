@@ -5,8 +5,10 @@
 
 :root {
   /* Palette drawn from the Sati Center certificate */
-  --teal: #3F7576;       /* wordmark and accents */
-  --olive: #A9A15C;      /* certificate border gold-olive, squiggles */
+  --teal: #17332C;       /* deep forest green — header, footer, accents */
+  --sage: #71917C;       /* muted sage green — hero card */
+  --sage-dim: #64826E;   /* sage, slightly deeper (hero card border/divider) */
+  --olive: #A9A15C;      /* certificate border gold-olive */
   --gold: #C9A24B;       /* dharma-wheel gold, used sparingly */
   --cream: #FAF5E7;      /* certificate parchment */
   --navy: #2E4F49;       /* deep green-teal for headings (was navy) */
@@ -15,6 +17,14 @@
   --page-bg: #EFEFEC; /* light grey page background */
   --border: rgba(46, 79, 73, 0.75); /* thin dark input border */
   --hairline: #E2DECC;              /* subtle card/footer borders */
+
+  /* Announcement category tags */
+  --tag-registration-bg: #CFE8E4;
+  --tag-registration-fg: #1F5750;
+  --tag-schedule-bg: #DCEEDC;
+  --tag-schedule-fg: #35633A;
+  --tag-faculty-bg: #F5E0BE;
+  --tag-faculty-fg: #7A5A22;
 
   /* Fonts follow the ICP faculty portal: an elegant display serif for
      headings, a readable old-style serif for body, nav, and buttons. */
@@ -302,46 +312,55 @@ html.embedded .layout {
   text-align: center;
 }
 
-/* ---- Hero image card: lotus photo on the right, text on the left ---- */
+/* ---- Hero card: sage green, text left, framed lotus photo right ---- */
 
 .hero-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #99A9A4; /* matches the lotus photo's backdrop, so the fit never shows seams */
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+  background: var(--sage);
+  border-radius: 24px;
   text-align: left;
-  padding: 4.5rem calc(44% + 2.5rem) 4.5rem 3rem; /* text sits left of the photo panel */
+  padding: 3rem;
   margin-bottom: 3rem;
 }
 
-/* The photo fills the card's right panel edge to edge, cropped to feature
-   the lotus bloom, and fades into the card's backdrop tone on its left edge. */
-.hero-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 auto;
-  width: 44%;
-  background:
-    linear-gradient(90deg, #99A9A4 0%, rgba(153, 169, 164, 0) 35%),
-    url("jonas-gerlach-PKd6IiD3DEk-unsplash.jpg") 62% 45% / cover no-repeat;
+.hero-card-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero-card > * {
-  position: relative;
+.hero-card-photo {
+  flex: 1 1 45%;
+  min-height: 280px;
+  border-radius: 16px;
+  background: url("jonas-gerlach-PKd6IiD3DEk-unsplash.jpg") 62% 45% / cover no-repeat;
 }
 
 .hero-card h1 {
-  color: var(--navy);
-  margin: 0;
-}
-
-.hero-card .subtitle {
-  margin: 1.25rem 0 0;
-  color: var(--slate);
+  color: var(--white);
+  font-size: clamp(1.875rem, 3.6vw, 2.625rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0.5rem 0 1.75rem;
+  max-width: 20ch;
 }
 
 .hero-card .eyebrow {
-  color: var(--teal);
+  color: var(--cream);
+  margin-bottom: 0;
+}
+
+.hero-cta {
+  align-self: flex-start;
+  gap: 0.5rem;
+}
+
+.hero-cta svg {
+  width: 18px;
+  height: 18px;
 }
 
 .eyebrow {
@@ -408,20 +427,67 @@ html.embedded .layout {
 }
 
 .announcement-card {
+  position: relative;
   background: var(--white);
   border: 1px solid var(--hairline);
-  border-left: 4px solid var(--teal);
-  border-radius: 0 8px 8px 0;
-  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(46, 79, 73, 0.06), 0 3px 8px rgba(46, 79, 73, 0.06);
+  padding: 1.5rem 1.75rem 1.5rem 2.25rem;
+}
+
+/* Rounded capsule accent, inset from the card edge, colored per category */
+.announcement-card::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 1.25rem;
+  bottom: 1.25rem;
+  width: 5px;
+  border-radius: 999px;
+  background: var(--teal);
+}
+
+.announcement-card[data-category="schedule"]::before {
+  background: var(--tag-schedule-fg);
+}
+
+.announcement-card[data-category="faculty"]::before {
+  background: var(--tag-faculty-fg);
 }
 
 .announcement-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 0.25rem;
+  color: var(--slate);
+  margin-bottom: 0.625rem;
+}
+
+.announcement-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--tag-registration-fg);
+  background: var(--tag-registration-bg);
+  border-radius: 999px;
+  padding: 0.1875rem 0.75rem;
+}
+
+.announcement-card[data-category="schedule"] .announcement-tag {
+  color: var(--tag-schedule-fg);
+  background: var(--tag-schedule-bg);
+}
+
+.announcement-card[data-category="faculty"] .announcement-tag {
+  color: var(--tag-faculty-fg);
+  background: var(--tag-faculty-bg);
 }
 
 .announcement-title {
@@ -675,26 +741,28 @@ html.embedded .layout {
     position: static;
   }
 
-  /* Center the hero text over the photo on narrow screens */
+  /* Stack text above the photo on narrow screens */
   .hero-card {
+    flex-direction: column;
     text-align: center;
-    padding: 3.5rem 1.5rem 3rem;
+    padding: 2rem;
+    gap: 1.75rem;
   }
 
-  .hero-card::before {
-    inset: 0;
-    width: auto;
-    background:
-      linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-      url("jonas-gerlach-PKd6IiD3DEk-unsplash.jpg") 65% 40% / cover no-repeat;
+  .hero-card-text {
+    align-items: center;
   }
 
   .hero-card h1 {
-    margin: 0 auto;
+    margin: 0.5rem auto 1.5rem;
   }
 
-  .hero-card .subtitle {
-    margin: 1.25rem auto 0;
+  .hero-card-photo {
+    min-height: 220px;
+  }
+
+  .hero-cta {
+    align-self: center;
   }
 }
 

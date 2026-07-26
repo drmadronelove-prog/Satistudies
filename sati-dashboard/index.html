@@ -106,10 +106,16 @@
     <!-- ============ Hero ============ -->
     <section class="hero">
 
-        <!-- Hero backdrop photo, ICP-portal style -->
         <div class="hero-card">
-          <h1 class="eyebrow">Sati Certificate Program</h1>
-          <p class="subtitle">Your home base for registration, schedules, people, and coursework, all in one place.</p>
+          <div class="hero-card-text">
+            <p class="eyebrow">Sati Certificate Program</p>
+            <h1>Your home base for registration, schedules, people, and coursework.</h1>
+            <a class="btn hero-cta" href="class-schedule.html">
+              Explore the program
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="hero-card-photo" role="img" aria-label="A pink lotus flower in bloom"></div>
         </div>
     </section>
 
@@ -160,13 +166,23 @@
       const feed = document.getElementById('announcement-feed');
       if (!feed || typeof ANNOUNCEMENTS === 'undefined') return;
 
+      var CATEGORY_LABELS = { registration: 'Registration', schedule: 'Schedule', faculty: 'Faculty' };
+
       ANNOUNCEMENTS.forEach(function (item) {
         const card = document.createElement('article');
         card.className = 'announcement-card';
+        if (item.category) card.dataset.category = item.category;
 
         const date = document.createElement('p');
         date.className = 'announcement-date';
-        date.textContent = item.date;
+        date.append(document.createTextNode(item.date));
+
+        if (item.category && CATEGORY_LABELS[item.category]) {
+          const tag = document.createElement('span');
+          tag.className = 'announcement-tag';
+          tag.textContent = CATEGORY_LABELS[item.category];
+          date.append(tag);
+        }
 
         const title = document.createElement('h3');
         title.className = 'announcement-title';
