@@ -348,7 +348,7 @@ html.embedded .layout {
   border-radius: 16px;
   border: 3px solid var(--gold);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
-  background: url("wilsan-u-aiUIs74ejx8-unsplash.jpg") 68% 45% / cover no-repeat;
+  background: url("zoltan-tasi-yanhwFwyoaU-unsplash.jpg") 50% 60% / cover no-repeat;
 }
 
 .hero-card h1 {
@@ -367,7 +367,14 @@ html.embedded .layout {
   height: 3px;
   border-radius: 2px;
   background: var(--gold);
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.hero-card .subtitle {
+  color: var(--cream);
+  font-size: 1.1875rem;
+  max-width: 34ch;
+  margin: 0;
 }
 
 
