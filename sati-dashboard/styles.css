@@ -354,18 +354,6 @@ html.embedded .layout {
   margin-bottom: 1rem;
 }
 
-.squiggle {
-  display: block;
-  width: 220px;
-  height: 14px;
-  margin: 1.5rem auto;
-}
-
-.squiggle.small {
-  width: 160px;
-  margin: 1rem 0 2.5rem;
-}
-
 .subtitle {
   font-size: 1.1875rem;
   max-width: 48ch;
@@ -409,6 +397,7 @@ html.embedded .layout {
 .support h2 {
   font-size: clamp(1.875rem, 4vw, 2.5rem);
   font-weight: 400;
+  margin-bottom: 1.75rem;
 }
 
 .announcement-feed {
@@ -530,10 +519,7 @@ html.embedded .layout {
   font-size: clamp(2rem, 4.5vw, 2.75rem);
   font-weight: 400;
   line-height: 1.15;
-}
-
-.page-content .squiggle {
-  margin: 1.25rem 0 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .page-content .page-intro {

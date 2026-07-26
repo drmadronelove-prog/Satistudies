@@ -19,18 +19,8 @@
 
 const ANNOUNCEMENTS = [
   {
-    date: "July 10, 2026",
-    title: "Spring Registration Now Open",
-    body: "Registration for the spring term is now open. Please complete your <a href=\"https://pci.jotform.com/form/261964969697081\">course registration</a> by August 15 to secure your place."
-  },
-  {
-    date: "June 28, 2026",
-    title: "Updated Class Schedule Posted",
-    body: "The class schedule for the upcoming term has been finalized and posted. Note that the Wednesday evening sutta study session now begins at 7:00&nbsp;PM Pacific."
-  },
-  {
-    date: "June 12, 2026",
-    title: "Welcome to the New Program Dashboard",
-    body: "This page is your home base for the certificate program: registration, schedules, faculty contacts, and Canvas access are all one click away. Bookmark it!"
+    date: "July 26, 2026",
+    title: "Fall Classes Are Open",
+    body: "Fall classes are open. Make sure to <a href=\"https://pci.jotform.com/form/261964969697081\">register</a> for the <a href=\"class-schedule.html\">Deepening Meditation Program</a> (only offered once every three years) and the Sati Seminar."
   }
 ];
