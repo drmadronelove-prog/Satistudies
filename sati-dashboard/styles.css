@@ -24,6 +24,7 @@
 
   /* Announcement category tags */
   --tag-registration-bg: #CFE8E4;
+  --support-bg: #DDE4E2;    /* a greyer shade of the registration tag color */
   --tag-registration-fg: #1F5750;
   --tag-schedule-bg: #DCEEDC;
   --tag-schedule-fg: #35633A;
@@ -352,26 +353,23 @@ html.embedded .layout {
 
 .hero-card h1 {
   color: var(--white);
-  font-size: clamp(2rem, 3.9vw, 2.875rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
   font-weight: 500;
-  line-height: 1.22;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
   margin: 0;
-  max-width: 20ch;
+  max-width: 16ch;
 }
 
-.hero-card .eyebrow {
-  color: var(--cream);
+.hero-rule {
+  display: block;
+  width: 64px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gold);
+  margin-top: 1.5rem;
 }
 
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 0.75rem;
-}
 
 .subtitle {
   font-size: 1.1875rem;
@@ -535,7 +533,7 @@ html.embedded .layout {
 }
 
 .support-card {
-  background: var(--tag-registration-bg);
+  background: var(--support-bg);
   border: 1px solid var(--hairline);
   border-radius: 8px;
   padding: 1.75rem 2rem;
