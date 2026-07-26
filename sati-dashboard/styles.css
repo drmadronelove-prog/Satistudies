@@ -210,7 +210,12 @@ html.embedded .layout {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem 2rem;
-  max-width: none; /* let the header's content spread to the full bar, not the page's narrower column */
+  /* Wider than the page's 1100px content column, so logo and nav spread
+     out instead of clustering, but capped well short of the viewport
+     edge so it stays visually balanced against the body below. */
+  max-width: 1400px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .logo {
