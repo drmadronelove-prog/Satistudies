@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Flow Chart — Sati Certificate Program</title>
+  <meta name="description" content="Suggested course sequence for the Sati Center Certificate in Theravada Buddhist Studies.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="auth.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Sati Center for Buddhist Studies — back to dashboard">
+        <img class="logo-mark" src="logo.png" alt="">
+        <span class="logo-text">
+          <span class="logo-name">Sati Center</span>
+          <span class="logo-sub">for Buddhist Studies</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <!-- TODO: replace # with real URLs -->
+        <a href="https://sati-lms.vercel.app">Sati LMS</a>
+        <a href="https://pci.jotform.com/form/261964969697081">Course Registration</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="class-schedule.html">Class Schedule</a>
+        <a href="https://sati.org/certificate/faculty/">Faculty and Staff</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <a class="back-link" href="index.html">&larr; Back to dashboard</a>
+
+    <h1>Course Flow Chart</h1>
+    <p class="page-intro">Sati Center Certificate in Theravada Buddhist Studies &mdash; suggested sequence.</p>
+
+    <div class="table-scroll">
+      <table class="flow-table">
+        <thead>
+          <tr>
+            <th scope="col">Course / Requirement</th>
+            <th scope="col">Year 1: Aug&ndash;May</th>
+            <th scope="col">Year 1: Summer</th>
+            <th scope="col">Year 2: Aug&ndash;May</th>
+            <th scope="col">Year 2: Summer</th>
+            <th scope="col">Year 3: Aug&ndash;May</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Eightfold Path Program</th>
+            <td>2 units</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <th scope="row">Sila | Samadhi | Pa&ntilde;&ntilde;&#257;</th>
+            <td>3 units</td>
+            <td>&mdash;</td>
+            <td>3 units</td>
+            <td>&mdash;</td>
+            <td>3 units</td>
+          </tr>
+          <tr>
+            <th scope="row">Seminar</th>
+            <td>1 unit</td>
+            <td>&mdash;</td>
+            <td>1 unit</td>
+            <td>&mdash;</td>
+            <td>1 unit</td>
+          </tr>
+          <tr>
+            <th scope="row">Begin retreat practicum (first 7-day retreat)</th>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <th scope="row">Sutta Study I</th>
+            <td>&mdash;</td>
+            <td>1.5 units</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <th scope="row">Complete retreat practicum (second 7-day retreat)</th>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+          <tr>
+            <th scope="row">Sutta Study II</th>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td>1.5 units</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              Elective (e.g. Anukampa)
+              <span class="flow-note">Alternatives: research paper, self study, practicum, or outside course credit.</span>
+            </th>
+            <td>1&ndash;3 units</td>
+            <td>1&ndash;3 units</td>
+            <td>1&ndash;3 units</td>
+            <td>1&ndash;3 units</td>
+            <td>1&ndash;3 units</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-name">Sati Center for Buddhist Studies</p>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Sati Center for Buddhist Studies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

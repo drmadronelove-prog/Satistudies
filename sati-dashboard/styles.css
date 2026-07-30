@@ -692,6 +692,55 @@ html.embedded .layout {
   color: var(--slate);
 }
 
+/* Course flow chart table */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+}
+
+.flow-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  white-space: nowrap;
+}
+
+.flow-table th,
+.flow-table td {
+  padding: 0.875rem 1.125rem;
+  text-align: left;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.flow-table thead th {
+  background: var(--sage-tint);
+  color: var(--navy);
+  font-weight: 600;
+  white-space: normal;
+}
+
+.flow-table tbody th {
+  font-weight: 600;
+  color: var(--navy);
+  white-space: normal;
+}
+
+.flow-table tbody tr:last-child th,
+.flow-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.flow-table .flow-note {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: var(--slate);
+  white-space: normal;
+  margin-top: 0.25rem;
+}
+
 /* Course schedule entries */
 .course-item {
   padding-top: 1.75rem;
