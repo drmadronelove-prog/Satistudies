@@ -1,5 +1,11 @@
 # Netlify configuration for the Sati Certificate Program dashboard.
 # The site is static — no build step; just publish the sati-dashboard folder.
+#
+# NOTE: this site actually deploys via GitHub Pages (see
+# .github/workflows/static.yml, triggered on push to this branch), not
+# Netlify — this file appears to be unused. Left in place in case Netlify
+# hosting is set up later, but don't rely on it for redirects today; use a
+# real static HTML redirect page instead (see learning.html).
 
 [build]
   publish = "sati-dashboard"
