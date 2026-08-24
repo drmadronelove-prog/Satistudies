@@ -3,3 +3,19 @@
 
 [build]
   publish = "sati-dashboard"
+
+# /learning is the real Sati LMS (a separate Next.js app on Vercel, not part
+# of this static site) — send visitors straight to its dashboard. Logged-out
+# visitors land on its login page; logged-in students see their real
+# enrolled/previously-enrolled course tiles.
+[[redirects]]
+  from = "/learning"
+  to = "https://sati-lms.vercel.app/dashboard"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/learning.html"
+  to = "https://sati-lms.vercel.app/dashboard"
+  status = 302
+  force = true
